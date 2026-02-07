@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place Your Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header with light purple color */
+        .header {
+            background-color: #b19cd9; /* light purple */
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .header img {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .box {
+            width: 400px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #b19cd9; /* match header */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #9a86c1; /* slightly darker purple on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="images/logo.jpg" alt="Your Logo">
+    <h1>Place Your Order</h1>
+</div>
+
+<div class="box">
+    <form action="https://formspree.io/f/meelqpdj" method="POST" onsubmit="alert('Thank you! Your order has been sent.');">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="order" placeholder="Type your order details here..." required></textarea>
+        <input type="submit" value="Send Order">
+    </form>
+</div>
+
+</body>
+</html>
